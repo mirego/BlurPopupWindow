@@ -3,12 +3,12 @@ package com.kyleduo.blurpopupwindow.library;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.support.annotation.FloatRange;
-import android.support.annotation.MainThread;
-import android.support.v8.renderscript.Allocation;
-import android.support.v8.renderscript.RenderScript;
-import android.support.v8.renderscript.ScriptIntrinsicBlur;
+import android.renderscript.Allocation;
+import android.renderscript.RenderScript;
+import android.renderscript.ScriptIntrinsicBlur;
 import android.view.View;
+import androidx.annotation.FloatRange;
+import androidx.annotation.MainThread;
 
 /**
  * Created by kyle on 2017/3/14.
