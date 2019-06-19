@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-def VERSION_NAME = "1.0.9"
+def VERSION_NAME = "1.0.9-mirego-1"
 def VERSION_CODE = 3
 def GROUP = "com.kyleduo.blurpopupwindow"
 
