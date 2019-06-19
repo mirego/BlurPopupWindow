@@ -16,25 +16,6 @@
 
 
 
-### Use with Gradle
-
-```groovy
-dependencies {
-    compile 'com.kyleduo.blurpopupwindow:blurpopupwindow:1.0.9'
-}
-```
-
-#### Enable support render script
-
-```groovy
-android {
-  defaultConfig {
-    renderscriptTargetApi 25
-	renderscriptSupportModeEnabled true
-  }
-}
-```
-
 ### Usage
 
 A typically usage would be like this:
@@ -163,7 +144,7 @@ public class SharePopup extends BlurPopupWindow {
 
 ```
 ##---------------Begin: proguard configuration for RenderScript  ----------
--keep class android.support.v8.renderscript.** { *; }
+-keep class androidx.renderscript.** { *; }
 ##---------------End: proguard configuration for RenderScript  ----------
 ```
 
