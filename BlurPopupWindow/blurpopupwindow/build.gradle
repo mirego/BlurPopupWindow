@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
 
 def VERSION_NAME = "1.0.9-mirego-1"
 def VERSION_CODE = 3
@@ -111,31 +110,3 @@ artifacts {
     archives javadocJar
     archives sourcesJar
 }
-
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-bintray {
-    user = properties.getProperty('bintray.user')
-    key = properties.getProperty('bintray.apikey')
-    configurations = ['archives']
-    pkg {
-        repo = 'maven'
-        name = POM_NAME
-        userOrg = 'kyleduo'
-        licenses = ['Apache-2.0']
-        websiteUrl = PRJ_URL
-        vcsUrl = GIT_URL
-        publicDownloadNumbers = true
-        override = true
-        publish = true
-
-        version {
-            name = VERSION_NAME
-            desc = 'A library for Android for popup window with blur background.'
-            released = new Date()
-            vcsTag = version
-        }
-    }
-}
-
-bintrayUpload.dependsOn install
