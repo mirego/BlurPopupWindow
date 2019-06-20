@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
 
 def VERSION_NAME = "1.0.9-mirego-1"
 def VERSION_CODE = 3
@@ -46,43 +45,6 @@ ext {
     PRJ_URL = 'https://github.com/kyleduo/BlurPopupWindow'
 }
 
-install {
-    repositories.mavenInstaller {
-        pom {
-            //noinspection GroovyAssignabilityCheck
-            project {
-                packaging POM_PACKAGING
-                groupId GROUP
-                artifactId POM_ARTIFACT_ID
-
-                // Add your description here
-                name POM_NAME
-                url PRJ_URL
-
-                // Set your license
-                licenses {
-                    license {
-                        name 'The Apache Software License, Version 2.0'
-                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    }
-                }
-                developers {
-                    developer {
-                        id 'kyleduo'
-                        name 'kyleduo'
-                        email 'kyleduo@gmail.com'
-                    }
-                }
-                scm {
-                    connection GIT_URL
-                    developerConnection GIT_URL
-                    url PRJ_URL
-
-                }
-            }
-        }
-    }
-}
 if (project.getPlugins().hasPlugin('com.android.application') ||
         project.getPlugins().hasPlugin('com.android.library')) {
     task sourcesJar(type: Jar) {
