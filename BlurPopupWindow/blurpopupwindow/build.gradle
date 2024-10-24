@@ -9,6 +9,7 @@ group = GROUP
 
 android {
     compileSdkVersion 32
+    namespace "com.kyleduo.blurpopupwindow.library"
 
     defaultConfig {
         minSdkVersion 14
@@ -48,7 +49,7 @@ if (project.getPlugins().hasPlugin('com.android.application') ||
         project.getPlugins().hasPlugin('com.android.library')) {
     task sourcesJar(type: Jar) {
         from android.sourceSets.main.java.srcDirs
-        classifier = 'sources'
+        archiveClassifier = 'sources'
     }
 
     task javadoc(type: Javadoc) {
@@ -63,7 +64,7 @@ if (project.getPlugins().hasPlugin('com.android.application') ||
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
+    archiveClassifier = 'javadoc'
     from javadoc.destinationDir
 }
 
